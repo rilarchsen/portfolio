@@ -1,4 +1,3 @@
-import Linkedin from "../assets/linkedin.svg";
 import {SocialIcon} from "react-social-icons";
 
 export default function Footer() {
