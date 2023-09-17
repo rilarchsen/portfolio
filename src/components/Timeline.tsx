@@ -1,7 +1,5 @@
-'use client';
-
 import { Button, Timeline } from 'flowbite-react';
-import {IconBaseProps} from "react-icons/lib/cjs/iconBase";
+import {ComponentProps, FC} from "react";
 
 type TimelineProps = {
   elements: TimelineElement[];
@@ -12,7 +10,7 @@ type TimelineElement = {
   title: string;
   body: string;
   time: string;
-  icon?: (props: IconBaseProps) => Element;
+  icon?: FC<ComponentProps<'svg'>>;
   button?: TimelineButton;
 };
 
