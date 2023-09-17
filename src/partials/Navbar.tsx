@@ -1,8 +1,9 @@
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, MoonIcon } from '@heroicons/react/24/outline'
-import {RouteAttributes, Routes} from "../config/Routes.tsx";
+import { Bars3Icon, XMarkIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
+import {RouteAttributes, Routes} from "@config/Routes.tsx";
 import {Link, useLocation} from "react-router-dom";
-import Logo from "../assets/logo-color.svg";
+import Logo from "@assets/logo-color.svg";
+import {useTheme} from "@contexts/useTheme.tsx";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -11,23 +12,14 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
 
   const location = useLocation();
+  const {toggleTheme, theme} = useTheme();
+  const isDarkTheme = theme === "dark";
 
   const routes = Routes.filter(route => RouteAttributes[route.path ?? ""]).map(route => ({
     name: RouteAttributes[route.path ?? ""]?.name ?? "",
     href: route.path ?? "",
     current: location.pathname === route.path
   }));
-
-  function toggleDarkMode() {
-    const setToDark = !document.documentElement.classList.contains("dark");
-    if (setToDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-    }
-  }
 
   return (
     <Disclosure as="nav" className="bg-primary">
@@ -78,9 +70,12 @@ export default function Navbar() {
                 <button
                   type="button"
                   className="relative rounded-full text-black dark:text-white p-2 hover-bg-primary"
-                  onClick={() => toggleDarkMode()}
+                  onClick={() => toggleTheme()}
                 >
-                  <MoonIcon className="h-6 w-6" aria-hidden="true" />
+                  {isDarkTheme
+                    ? <SunIcon className="h-6 w-6" aria-hidden="true" />
+                    : <MoonIcon className="h-6 w-6" aria-hidden="true" />
+                  }
                 </button>
 
                 {/* Profile dropdown */}

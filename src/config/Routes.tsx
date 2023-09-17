@@ -1,7 +1,8 @@
 import {RouteObject} from "react-router-dom";
 import HomePage from "../pages/HomePage.tsx";
-import AboutPage from "../pages/AboutPage.tsx";
 import NotFoundPage from "../pages/NotFoundPage.tsx";
+import ContactPage from "@pages/ContactPage.tsx";
+import ThankYouPage from "@pages/ThankYouPage.tsx";
 
 export const Routes : RouteObject[] = [
   {
@@ -9,8 +10,12 @@ export const Routes : RouteObject[] = [
     element: <HomePage />,
   },
   {
-    path: "/about",
-    element: <AboutPage />
+    path: "/contact",
+    element: <ContactPage />
+  },
+  {
+    path: "/thank-you",
+    element: <ThankYouPage />
   },
   {
     path: "/*",
@@ -26,7 +31,7 @@ export const RouteAttributes : Record<string, RouteAttribute> = {
   "/": {
     name: "Home",
   },
-  "/about": {
-    name: "About",
+  "/contact": {
+    name: "Contact",
   }
 };
