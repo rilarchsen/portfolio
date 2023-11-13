@@ -1,5 +1,4 @@
 import {createContext, ReactNode, useContext, useState} from "react";
-import ChildrenRenderer from "../components/ChildrenRenderer.tsx";
 
 type Theme = "light" | "dark";
 
@@ -29,7 +28,7 @@ export function ThemeProvider({children} : {children: ReactNode}) {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-      <ChildrenRenderer children={children} />
+      {children}
     </ThemeContext.Provider>
   );
 }

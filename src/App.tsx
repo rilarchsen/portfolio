@@ -1,11 +1,11 @@
-import Layout from "./partials/Layout.tsx";
 import {ThemeProvider} from "./contexts/useTheme.tsx";
+import MainPage from "@pages/MainPage.tsx";
 
 function App() {
 
   return (
     <ThemeProvider>
-      <Layout />
+      <MainPage />
     </ThemeProvider>
   )
 }
