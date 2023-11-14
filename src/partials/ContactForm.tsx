@@ -1,5 +1,5 @@
 import {Button, Modal, TextInput} from "flowbite-react";
-import {useState} from "react";
+import {FormEvent, useState} from "react";
 
 export default function ContactForm() {
 
@@ -8,11 +8,11 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [successModal, setSuccessModal] = useState(false);
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://public.herotofu.com/v1/b5afb110-5557-11ee-9a5e-cf86fe56739d', {
+      await fetch('https://public.herotofu.com/v1/b5afb110-5557-11ee-9a5e-cf86fe56739d', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
