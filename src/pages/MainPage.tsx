@@ -177,7 +177,8 @@ export default function MainPage() {
           <h2 className="text-4xl font-bold text-gray-200 text-center">Projects</h2>
           <div className="h-[24rem] sm:h-64 xl:h-80 2xl:h-96 w-[20rem] xl:w-[48rem]">
             <Carousel slide={false}>
-              <div className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
+              <div
+                className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
                 <div className={"flex flex-row xl:flex-col dark:bg-gray-800 bg-gray-200 p-4 xl:p-8 rounded"}>
                   <h1>K</h1>
                   <h1>Y</h1>
@@ -190,11 +191,13 @@ export default function MainPage() {
                     such as CVR, PEP lists, and Google, and serve as a repository for gathered customer information.
                     The platform also supports the request and storing of customer identity verification documents,
                     as well as the automatic renewal of connected data for stored customers. The development stack
-                    involved an ASP.NET Core backend with Azure SQL and document databases, and a TypeScript React frontend.
+                    involved an ASP.NET Core backend with Azure SQL and document databases, and a TypeScript React
+                    frontend.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
+              <div
+                className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
                 <div className={"flex flex-row xl:flex-col dark:bg-gray-800 bg-gray-200 p-4 xl:p-8 rounded"}>
                   <h1>Y</h1>
                   <h1>A</h1>
@@ -203,10 +206,30 @@ export default function MainPage() {
                 <div>
                   <h1 className={"text-center xl:text-left"}>Yet Another Language</h1>
                   <p>
-                    YAL is a language designed to support single-core asynchronous programming natively on microcontrollers
+                    YAL is a language designed to support single-core asynchronous programming natively on
+                    microcontrollers
                     (such as Arduino Uno or ESP32) directly through the "async/await" keywords, and syntax familiar to
                     C/C++ programmers. The compiler is written in C#, using a parser generated with ANTLR, and produces
-                    C++ code and optionally a scaffolded PlatformIO project. The language also supports referencing external/standard C++ functions.
+                    C++ code and optionally a scaffolded PlatformIO project. The language also supports referencing
+                    external/standard C++ functions.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
+                <div className={"flex flex-row xl:flex-col dark:bg-gray-800 bg-gray-200 p-4 xl:p-8 rounded"}>
+                  <h1>C</h1>
+                  <h1>X</h1>
+                  <h1>R</h1>
+                </div>
+                <div>
+                  <h1 className={"text-center xl:text-left"}>Chest X-ray AI Disease Classifier</h1>
+                  <p>
+                    A machine learning model to detect and classify 5 common diseases in chest X-rays.
+                    The model was trained on a combined dataset from the CheXpert (Stanford Hospital)
+                    and ChestX-ray8 (NIH Clinical Center) datasets (totaling 335,534 frontal and lateral samples).
+                    Both traditional (SVM) and deep learning (DenseNet) machine learning methods were tested
+                    and documented, as well as ensemble approaches.
                   </p>
                 </div>
               </div>
@@ -222,10 +245,10 @@ export default function MainPage() {
         previousSectionName={"Projects"}
         className={"dark:bg-gray-900 bg-gray-100 h-fit xl:py-96 py-32"}
       >
-        <ContactForm />
+        <ContactForm/>
       </Section>
 
-      <Footer />
+      <Footer/>
 
     </section>
   )
