@@ -233,6 +233,24 @@ export default function MainPage() {
                   </p>
                 </div>
               </div>
+              <div
+                className="flex flex-col xl:flex-row gap-8 h-full items-center xl:justify-center bg-gray-300 dark:bg-gray-700 dark:text-white py-8 px-10 xl:px-20 select-none overflow-auto">
+                <div className={"flex flex-row xl:flex-col dark:bg-gray-800 bg-gray-200 p-4 xl:p-8 rounded"}>
+                  <h1>V</h1>
+                  <h1>S</h1>
+                </div>
+                <div>
+                  <h1 className={"text-center xl:text-left"}>vSolid</h1>
+                  <p>
+                    A version control layer for decentralized RDF graph databases using the Solid protocol.
+                    The Solid protocol defines a decentralized web of RDF data graphs based on individual pods
+                    giving users full control over their data. vSolid adds a versioning layer that allows users
+                    to query and restore previous versions of their data. The prototypical implementation
+                    includes a group of components added to the open-source Community Solid Server implementation
+                    of the Solid protocol to handle data versioning and versioned queries.
+                  </p>
+                </div>
+              </div>
             </Carousel>
           </div>
 
