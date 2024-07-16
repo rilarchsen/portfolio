@@ -65,7 +65,7 @@ export default function MainPage() {
             }}
             width="200"
           />
-          <p className="dark:text-gray-400 text-gray-600">Computer Science Student | Software Developer</p>
+          <p className="dark:text-gray-400 text-gray-600">Software Developer</p>
         </div>
       </Section>
 
@@ -126,7 +126,7 @@ export default function MainPage() {
               <div className={"dark:text-gray-400 text-gray-700"}>
                 <p className={"text-center xl:text-left"}>Student Software Developer</p>
                 <p className="font-bold text-center xl:text-left">Legal IT ApS</p>
-                <p className={"text-center xl:text-left"}>February 2023 - Present</p>
+                <p className={"text-center xl:text-left"}>February 2023 - June 2024</p>
               </div>
             </div>
           </div>
