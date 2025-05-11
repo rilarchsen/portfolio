@@ -195,7 +195,7 @@ export default function MainPage() {
                 title="LEGO House Digital Rebuild" 
                 sideInitials={["L", "E", "G", "O"]} 
                 body="I was part of the Trifork team delivering the digital rebuild for LEGO House.
-                    The project facilitated the infrastructural shift of the platform from on-premise to the cloud
+                    The project facilitated the infrastructural shift of the platform from on-premise to cloud microservices
                     with the goal of modernizing the interactive experiences and future-proofing the development of new experiences." 
               />
                <CarouselCard 
