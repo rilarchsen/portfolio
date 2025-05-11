@@ -17,11 +17,11 @@ type SectionProps = {
 export default function Section({previousSectionId, previousSectionName, nextSectionId, nextSectionName, children, sectionId, className} : SectionProps) {
   const {theme} = useTheme();
   return (
-    <div className={twMerge(`flex items-center justify-center h-screen w-full relative px-4 xl:px-0`, className)} id={sectionId}>
+    <div className={twMerge(`flex items-center justify-center h-screen w-full relative px-4 lg:px-0`, className)} id={sectionId}>
       {previousSectionId && (<>
         <Link to={`${previousSectionId}`} className={"absolute top-20"}>
           <Tooltip content={previousSectionName} placement={"bottom"} style={theme}>
-            <ArrowUpCircleIcon className="h-10 xl:h-16 w-10 xl:w-16 cursor-pointer text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-600" aria-hidden="true" />
+            <ArrowUpCircleIcon className="h-10 lg:h-16 w-10 lg:w-16 cursor-pointer text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-600" aria-hidden="true" />
           </Tooltip>
         </Link>
       </>)}
@@ -29,9 +29,9 @@ export default function Section({previousSectionId, previousSectionName, nextSec
         {children}
       </div>
       {nextSectionId && (
-        <Link to={`${nextSectionId}`} className={"absolute bottom-20 xl:bottom-10"}>
+        <Link to={`${nextSectionId}`} className={"absolute bottom-20 lg:bottom-10"}>
           <Tooltip content={nextSectionName} placement={"top"} style={theme}>
-            <ArrowDownCircleIcon className="h-10 xl:h-16 w-10 xl:w-16 cursor-pointer text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-600" aria-hidden="true" />
+            <ArrowDownCircleIcon className="h-10 lg:h-16 w-10 lg:w-16 cursor-pointer text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-600" aria-hidden="true" />
           </Tooltip>
         </Link>
       )}

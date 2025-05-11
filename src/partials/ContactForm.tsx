@@ -32,7 +32,7 @@ export default function ContactForm() {
   }
 
   return (<>
-    <form className="space-y-4 w-80 xl:w-96" acceptCharset="UTF-8" onSubmit={handleSubmit}>
+    <form className="space-y-4 w-80 lg:w-96" acceptCharset="UTF-8" onSubmit={handleSubmit}>
       <h2 className="text-4xl font-bold dark:text-gray-200 text-gray-800">Contact Me</h2>
       <TextInput className="text-white" id="name" name={"name"} placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)} />
       <TextInput className="text-white" id="email" name={"email"} placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)}  type="email" />
